@@ -1,0 +1,66 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    font-family: Open Sans;
+    justify-content: center;
+    height: inherit;
+    background-color: #272727;
+}
+
+.container {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: rgba(237, 237, 237, 0.70);
+    border: #000000 solid 1px;
+    border-radius: 5%;
+    width: 15%;
+}
+
+.text-input {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: #D9D9D9 solid 2px;
+    border-radius: 6px;
+    font-family: Open Sans;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#btnSignIn {
+    background-color: #68c8ff;
+    width: 100%;
+    padding: 6px;
+    border-radius: 6px;
+    margin: 0 auto;
+    display: block;
+    transition: .3s;
+    border: #000000 solid 1px;
+}
+
+#btnSignIn:hover {
+    background-color: #4489ca;
+}
+
+.nameInput {
+    padding-top: 7px;
+    padding-bottom: 2px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 auto;
+    padding: 4%;
+}
