@@ -13,23 +13,24 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1 id="signIn">To-do List<br>Sign Up</h1>
+            <h1 id="signUp">To-do List<br>Sign Up</h1>
         </div>
-        <div class="form">
+        <form class="form" id="signUpForm" action="https://example.com/api/signup" method="POST">
             <p class="nameInput">Name</p>
-            <input type="text" class="text-input" id="name" placeholder="Name" autofocus>
+            <input type="text" class="text-input" id="name" name="name" placeholder="Name" required autofocus>
             <p class="nameInput">Email</p>
-            <input type="email" class="text-input" id="email" placeholder="Email" autofocus>
+            <input type="email" class="text-input" id="email" name="email" placeholder="Email" required>
             <p class="nameInput">Password</p>
-            <input type="password" class="text-input" id="passwd" placeholder="Password">
+            <input type="password" class="text-input" id="passwd" name="password" placeholder="Password" required>
             <p class="nameInput">Confirm Password</p>
-            <input type="password" class="text-input" id="confirmPasswd" placeholder="Confirm Password">
+            <input type="password" class="text-input" id="confirmPasswd" name="confirmPassword" placeholder="Confirm Password" required>
+            <div class="inputSignUp">
+                <input type="submit" id="btnSignUp" value="Sign Up">
+            </div>
+        </form>
+        <div class="textRegisteredUser">
+            <p id="textRegistered">Already registered? <a href="signIn.html">Sign In</a></p>
         </div>
-    <div class="inputSignIn">
-        <input type="button" id="btnSignIn" value="Sign Up">
-    </div>
-    <div class="textRegisteredUser">
-        <p id="textRegistered">Already registered? <a href="signIn.html">Sign In</a></p>
     </div>
 
     <script src="scripts/signUp.js"></script>

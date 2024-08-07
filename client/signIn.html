@@ -15,20 +15,21 @@
         <div class="header">
             <h1 id="signIn">To-do List<br>Sign In</h1>
         </div>
-        <div class="form">
+        <form class="form" id="signInForm" action="http://localhost" method="POST">
             <p class="nameInput">Email</p>
-            <input type="email" class="text-input" id="email" placeholder="Email" autofocus>
+            <input type="email" class="text-input" id="email" name="email" placeholder="Email" required autofocus>
             <p class="nameInput">Password</p>
-            <input type="password" class="text-input" id="passwd" placeholder="Password">
+            <input type="password" class="text-input" id="passwd" name="password" placeholder="Password" required>
+            <div class="forPasswd">
+                <p id="forgotPassword"><a href="#">Forgot password?</a></p>
+            </div>
+            <div class="inputSignIn">
+                <input type="submit" id="btnSignIn" value="Sign In">
+            </div>
+        </form>
+        <div class="textNewUser">
+            <p id="textRegister">New here? <a href="signUp.html">Sign Up</a></p>
         </div>
-    <div class="forPasswd">
-        <p id="forgotPassword"><a href="#">Forgot password?</a></p>
-    </div>
-    <div class="inputSignIn">
-        <input type="button" id="btnSignIn" value="Sign In">
-    </div>
-    <div class="textNewUser">
-        <p id="textRegister">New here? <a href="signUp.html">Sign Up</a></p>
     </div>
 
     <script src="scripts/signIn.js"></script>

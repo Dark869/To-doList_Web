@@ -1,0 +1,89 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #272727;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "Open Sans";
+    font-size: 22px;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: inherit;
+}
+
+.barStatus {
+    width: 100%; 
+    height: 100px; 
+    background-color: #428bca; 
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 50px;
+    box-sizing: border-box;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.text .Icons {
+    display: inline; 
+}
+
+.Icons {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.buttons {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    transition: .05s;
+}
+
+#btnTheme:hover {
+    background-color: #2f628f;
+    border-radius: 20px;
+}
+
+#SignOff:hover {
+    background-color: #2f628f;
+    border-radius: 30px;
+}
+
+.boxButtonAdd {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+}
+
+#IconAdd{
+    background-color: #428bca;
+    border-radius: 30%;
+    border: 1px solid #ffffff;
+}
+
+#IconAdd:hover {
+    background-color: #2f628f;
+}
