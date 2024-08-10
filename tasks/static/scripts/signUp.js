@@ -9,29 +9,42 @@ function init() {
         const confirmPasswd = document.getElementById('confirmPasswd').value;
 
 
-        if (validateData(email, passwd)) {
-            console.log(userName);
-            console.log(email);
-            console.log(passwd);
-            console.log(confirmPasswd);
-    
+        if (validateData(userName, email, passwd, confirmPasswd)) {
+            //sendData(userName, email, passwd);
         }
     });
 }
 
-function validateData(email, passwd) {
+function sendData(userName, email, passwd) {
+    
+};
+
+
+function validateData(userName, email, passwd, confirmPasswd) {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const uppercasePattern = /[A-Z]/;
-    const SymbolPattern = /[.,#$%&*?:;]/;
+    const SymbolPatternPermit = /[#,.$%&?]/;
+    const SymbolPatternDeny = /['";+()\-*<>{}=%]/;
     const numberParttern = /[0-9]/;
 
-    if (!email || !passwd) {
+
+    if (!userName || !email || !passwd || !confirmPasswd) {
         alert('Favor de llenar todos los campos');
+        return false;
+    }
+
+    if (SymbolPatternDeny.test(userName)) {
+        alert('El nombre tiene caracteres no válidos');
         return false;
     }
 
     if (!emailPattern.test(email)) {
         alert('La dirección de correo no es válida');
+        return false;
+    }
+
+    if (SymbolPatternDeny.test(email)) {
+        alert('La dirección de correo tiene caracteres no válidos');
         return false;
     }
 
@@ -50,8 +63,18 @@ function validateData(email, passwd) {
         return false;
     }
 
-    if (!SymbolPattern.test(passwd)) {
+    if (!SymbolPatternPermit.test(passwd)) {
         alert('La contraseña debe tener al menos un caracter especial');
+        return false;
+    }
+
+    if (SymbolPatternDeny.test(passwd)) {
+        alert('La contraseña tiene caracteres no válidos');
+        return false;
+    }
+
+    if (passwd !== confirmPasswd) {
+        alert('Las contraseñas no coinciden');
         return false;
     }
 
